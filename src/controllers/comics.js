@@ -1,6 +1,6 @@
-module.exports = ({ services }) => {
+module.exports = ({ services, controllers }) => {
 
-  const { SearchService } = services.search;
+  const { ComicsService } = services.comics;
 
   /**
    * ComicsController
@@ -14,11 +14,10 @@ module.exports = ({ services }) => {
      */
     static async get(req, res){
       try {
-        const result = SearchService.find(req.params.cep);
+        const result = await ComicsService.find(req.query.offset, req.query.limit);
         return res.json(result);
       } catch (error) {
-        if(error.message == '404') return res.status(404).json({ message: 'CEP não encontrado!', errorCode: 404});
-        return res.status(500).json({ message: 'Erro interno!', errorCode: 500, trace: error });
+        return res.status(500).json({ message: 'Internal Error', errorCode: 500, trace: error });
       }
     }
   }
