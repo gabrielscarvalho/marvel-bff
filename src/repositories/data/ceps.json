@@ -1,0 +1,18 @@
+{
+  "ceps": [{
+      "id": 20751003,
+      "logradouro": "AV DOM HELDER CAMARA",
+      "municipio": "São Paulo",
+      "estado": "São Paulo",
+      "complemento": ""
+    },
+
+    {
+      "id": 21875750,
+      "logradouro": "RUA BACABAL",
+      "municipio": "Maceió",
+      "estado": "Alagoas",
+      "complemento": "lote 1"
+    }
+  ]
+}
