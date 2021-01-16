@@ -3,9 +3,9 @@ module.exports = ({ services }) => {
   const { SearchService } = services.search;
 
   /**
-   * SearchController
+   * ComicsController
    */
-  class SearchController {
+  class ComicsController {
     /**
      * get
      * @param {HttpRequest} req 
@@ -23,6 +23,6 @@ module.exports = ({ services }) => {
     }
   }
 
-  return { SearchController };
+  return { ComicsController };
 
 };

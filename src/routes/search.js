@@ -1,7 +1,7 @@
 module.exports = ({ express, controllers }) => {
 
-  const { SearchController } = controllers.search;
+  const { ComicsController } = controllers.comics;
 
-  express.get('/cep/:cep', SearchController.get);
+  express.get('/cep/:cep', ComicsController.get);
 
 };
